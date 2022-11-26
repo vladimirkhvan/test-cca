@@ -18,7 +18,7 @@ export const handleOrders = async (req, res) => {
     //     3: data.value,
     // });
 
-    // console.log(response);
+    console.log(response);
 
     res.json({
         success: true,
