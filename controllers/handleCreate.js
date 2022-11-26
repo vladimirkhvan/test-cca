@@ -5,15 +5,7 @@ export const handleCreate = async (req, res) => {
 
     const record = await bp.getRecordById(req.body.payload.catalogId, req.body.payload.recordId);
 
-    const repLog = await bp.getRecordById('12', 1);
-
-    console.log('record is ', record);
-
-    console.log('rep log is ', repLog);
-
-    console.log('rep log object is ', repLog.values['3'][0]);
-
-    const response = await bp.postRecord('12', {
+    await bp.postRecord('12', {
         3: [
             {
                 sectionId: '3',
@@ -27,8 +19,6 @@ export const handleCreate = async (req, res) => {
         ],
         4: record.values['3'],
     });
-
-    console.log('response is ', response);
 
     res.json({
         success: true,
