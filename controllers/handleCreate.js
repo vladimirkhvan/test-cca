@@ -15,15 +15,15 @@ export const handleCreate = async (req, res) => {
     console.log('rep log object is ', repLog.values['3'][0]);
 
     const response = await bp.postRecord('12', {
-        3: [{
+        3: {
             sectionId: '3',
-            catalogId: '12',
-            catalogTitle: 'Склад',
+            catalogId: '11',
+            catalogTitle: 'Заказы',
             catalogIcon: 'content-11',
             recordId: record.id,
             recordTitle: record.title,
             isRemoved: false,
-        }],
+        },
         4: record.values['3'],
     });
 
