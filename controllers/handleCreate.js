@@ -9,6 +9,10 @@ export const handleCreate = async (req, res) => {
     console.log(record);
     console.log(record.values['3']);
 
+    const repLog = await bp.getRecordById('12', 1);
+
+    console.log('rep log is ', repLog);
+
     const response = await bp.postRecord('12', {
         3: record.values['3'],
         4: record.values['3'],
