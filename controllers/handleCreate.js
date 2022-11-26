@@ -8,6 +8,8 @@ export const handleCreate = async (req, res) => {
     
     const repLog = await bp.getRecordById('12', 1);
 
+    console.log('record is ', record);
+
     console.log('rep log is ', repLog);
 
     console.log('rep log object is ', repLog.values['3'][0])
