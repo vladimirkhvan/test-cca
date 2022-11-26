@@ -10,7 +10,7 @@ export const handleCreate = async (req, res) => {
     console.log(record.values['3']);
 
     const response = await bp.postRecord('12', {
-        3: record.catalogId,
+        3: record.values['3'],
         4: record.values['3'],
     });
 
