@@ -6,7 +6,7 @@ export const handleOrders = async (req, res) => {
 
     const bp = new BP('test_vladimir.bpium.ru', 'vladimirkhvan23@gmail.com', '612554097');
 
-    const response = await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
+    await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
         2: [req.body.payload.values['2'][0]],
         3: data.value,
     });
