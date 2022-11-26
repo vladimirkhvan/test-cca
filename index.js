@@ -7,8 +7,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-        
-app.get('/', handleOrders); 
+                
+app.post('/', handleOrders); 
 
 app.listen(process.env.PORT || 8800, () => {
     console.log('server is working properly');
