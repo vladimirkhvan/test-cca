@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as BP from 'bp-api';
+import BP from 'bp-api';
 
 export const handleOrders = async (req, res) => {
     const {data} = await axios.get('https://test.bpium.ru/api/webrequest/request');
@@ -10,9 +10,7 @@ export const handleOrders = async (req, res) => {
     const bp = new BP(
         'https://test_vladimir.bpium.ru/',
         'vladimirkhvan23@gmail.com',
-        '612554097',
-        protocol(https),
-        timeout(30000),
+        '612554097'
     );
 
     // await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
