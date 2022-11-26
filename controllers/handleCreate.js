@@ -13,9 +13,9 @@ export const handleCreate = async (req, res) => {
     console.log('rep log object is ', repLog.values['3'][0])
 
     const response = await bp.postRecord('12', {
-        3: [record.values['3']],
+        3: record,  
         4: record.values['3'],
-    });
+    }); 
 
     res.json({
         success: true,
