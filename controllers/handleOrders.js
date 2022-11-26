@@ -1,5 +1,5 @@
 import axios from 'axios';
-import BP from 'bp-api';
+import * as BP from 'bp-api';
 
 export const handleOrders = async (req, res) => {
     const {data} = await axios.get('https://test.bpium.ru/api/webrequest/request');
