@@ -11,12 +11,12 @@ export const handleOrders = async (req, res) => {
 
     console.log(bp);
 
-    const response = await bp.getRecordById(req.body.payload.catalogId, req.body.payload.recordId)
+    // const response = await bp.getRecordById(req.body.payload.catalogId, req.body.payload.recordId)
 
-    // const response = await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
-    //     2: [req.body.payload.values['2'][0]],
-    //     3: data.value,
-    // });
+    const response = await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
+        2: [req.body.payload.values['2'][0]],
+        3: data.value,
+    });
 
     console.log(response);
 
