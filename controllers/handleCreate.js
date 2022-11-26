@@ -7,10 +7,11 @@ export const handleCreate = async (req, res) => {
     const record = await bp.getRecordById(req.body.payload.catalogId, req.body.payload.recordId);
 
     console.log(record);
+    console.log(record.values['3']);
 
-    const response = await bp.postRecord(req.body.payload.catalogId, {
-        3: req.body.payload.catalogId,
-        4: req.body.payload.values['3'],
+    const response = await bp.postRecord('12', {
+        3: record.catalogId,
+        4: record.values['3'],
     });
 
     console.log(response);
