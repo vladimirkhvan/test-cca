@@ -11,7 +11,7 @@ export const handleOrders = async (req, res) => {
 
     const response = await bp.patchRecord(req.body.payload.catalogId, req.body.payload.recordId, {
         2: [req.body.payload.values['2'][0]],
-        3: value,
+        3: data.value,
     });
 
     console.log(response);
